@@ -1,0 +1,44 @@
+@import '~assets/css/variables.less';
+@import '~assets/css/mixins.less';
+
+.menus {
+  text-transform: uppercase;
+  position: absolute;
+  top: -40px;
+  right: -3px;
+  li {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-left: 5px;
+    padding: 0 12px;
+    height: 30px;
+    line-height: 28px;
+    border: 3px solid #201f1f;
+    border-radius: 10px 10px 0 0;
+    background-color: #fff;
+    .transition(height);
+    a {
+      text-decoration: none;
+      display: block;
+      color: inherit;
+    }
+    &.active, &:hover {
+      height: 38px;
+      line-height: 36px;
+      background-color: @color-dark;
+      border-bottom: none;
+      color: #fff;
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .menus {
+    overflow-x: auto;
+    overflow-y: hidden;
+    left: -8px;
+    ul {
+      width: 130%;
+    }
+  }
+}

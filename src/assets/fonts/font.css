@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'MGillSans';
+  src: url('MGillSans.eot');
+  src: url('MGillSans.woff2') format('woff2'),
+       url('MGillSans.woff') format('woff'),
+       url('MGillSans.ttf') format('truetype'),
+       url('MGillSans.svg#MGillSans') format('svg'),
+       url('MGillSans.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+

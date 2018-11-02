@@ -1,0 +1,97 @@
+@import (less) 'assets/fonts/font.css';
+@import '~assets/css/reset.less';
+@import '~assets/css/variables.less';
+@import '~assets/css/mixins.less';
+
+html, body, #root {
+  height: 100%;
+}
+
+html, body, button {
+  font-family: MGillSans;
+  font-size: 14px;
+}
+
+.rc-trigger-popup-hidden {
+  display: none;
+}
+
+.dashboard {
+  padding: 15px;
+}
+
+.container {
+  width: 100%;
+}
+
+.logo {
+  color: @color-black;
+  line-height: 1;
+  font-size: 40px;
+  margin-bottom: 15px;
+  font-weight: normal;
+  position: relative;
+}
+
+.panel {
+  border: 3px solid #201f1f;
+}
+
+.panelHeader {
+  position: relative;
+  height: 40px;
+  line-height: 40px;
+  background-color: @color-dark;
+  border-bottom: 3px solid @color-dark;
+}
+
+.filters {
+  color: #fff;
+  padding-left: 15px;
+  font-size: 20px;
+  button {
+    color: @color-black;
+    width: 60px;
+    height: 24px;
+    line-height: 22px;
+    margin-left: 10px;
+    border: 2px solid #201f1f;
+    background-color: #8e8e8e;
+    border-radius: 100px;
+    .transition;
+    &.active, &:hover {
+      background-color: #d8d8d8;
+    }
+  }
+}
+
+.panelBody {
+  display: table;
+  width: 100%;
+}
+
+.panelMain {
+  padding: 15px;
+  display: table-cell;
+}
+
+.panelSider {
+  padding: 20px;
+  border-left: 2px solid @color-dark;
+  display: table-cell;
+  width: 25%;
+  min-width: 230px;
+}
+
+
+@media only screen and (max-width: 900px) {
+  .panelSider {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .logo {
+    top: -20px;
+  }
+}

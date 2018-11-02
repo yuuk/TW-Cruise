@@ -1,0 +1,120 @@
+
+@import '~assets/css/variables.less';
+@import '~assets/css/mixins.less';
+
+.item {
+  border: 2px solid #3c3c3c;
+  border-radius: 10px;
+  padding: 10px 15px 10px 0;
+  background-color: #c5e4ac;
+  position: relative;
+  margin-bottom: 15px;
+  line-height: 1;
+  &.building {
+    background-color: #fffab0;
+  }
+  &:last-child {margin-bottom: 0;}
+}
+
+.avatar {
+  width: 41px;
+  height: 41px;
+  background-color: #878787;
+  border-radius: 100px;
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+
+.summary {
+  padding-left: 70px;
+}
+
+.name {
+  font-size: 16px;
+  padding-right: 15px;
+}
+
+.config {
+  font-weight: 400;
+  font-style: normal;
+  &::before {
+    .divide-line;
+  }
+}
+
+.resources {
+  margin-top: 8px;
+}
+
+.addAction {
+  cursor: pointer;
+  &::before{
+    content: '+';
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  &::after {
+    .divide-line;
+  }
+}
+
+.resourceItem {
+  padding-left: 5px;
+  padding-right: 10px;
+  button {
+    width: 14px;
+    height: 14px;
+    line-height: 10px;
+    color: #878787;
+    border: 1px solid;
+    border-radius: 5px;
+    background: none;
+    font-weight: bold;
+    font-size: 15px;
+    vertical-align: -1px;
+    margin-left: 3px;
+  }
+}
+
+
+.deny {
+  float: right;
+  cursor: pointer;
+  .icon {
+    transform: rotate(90deg);
+    vertical-align: -2px;
+    margin-right: 5px;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .name {
+    display: block;
+    margin-bottom: 8px;
+  }
+  .config {
+    &::before{
+      content: '';
+    }
+  }
+  .addAction {
+    display: block;
+    margin-bottom: 8px;
+    &::after {
+      content: '';
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .avatar {
+    display: none;
+  }
+  .summary {
+    padding-left: 15px;
+  }
+}

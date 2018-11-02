@@ -1,0 +1,21 @@
+{
+  "presets": [
+    "react",
+    [
+      "env",
+      {
+        "targets": {
+          "browsers": [
+            "last 5 versions",
+            "ie >= 9"
+           ]
+        },
+        "modules": false
+      }
+    ]
+  ],
+  "plugins": [
+    "transform-decorators-legacy",
+    "transform-class-properties"
+  ]
+}
